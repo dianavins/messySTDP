@@ -1,0 +1,2 @@
+# messySTDP
+PyTorch STDP implementation
