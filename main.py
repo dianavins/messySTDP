@@ -28,12 +28,11 @@ for layer in model:
 # define dictionary spikeOutputsTimesCache. Key = layer name. Value = list of tensors of spikes. idx of tensor in list + 1 = time step, tensor size = num neurons in layer. 
 # initialize all tensors to random 0 or 1
 spikeOutputsTimeCache = OrderedDict()
-
 spikeOutputsTimeCache["input"] = [torch.randint(0, 2, (15,)) for _ in range(10)] # 10 time steps
+spikeOutputsTimeCache["layer1"] = [torch.randint(0, 2, (15,)) for _ in range(10)] # 10 time steps
+spikeOutputsTimeCache["layer2"] = [torch.randint(0, 2, (15,)) for _ in range(10)] # 10 time steps
+spikeOutputsTimeCache["layer3"] = [torch.randint(0, 2, (15,)) for _ in range(10)] # 10 time steps
         
-for layer in self.model:
-    spikeOutputsTimeCache[layer.layerName] = [torch.randint(0, 2, (15,)) for _ in range(10)] # 10 time steps
-
 
 # Parameters for the STDP rule (Gerstner)
 A_plus = 0.01
