@@ -29,9 +29,9 @@ for layer in model:
 # initialize all tensors to random 0 or 1
 spikeOutputsTimeCache = OrderedDict()
 spikeOutputsTimeCache["input"] = [torch.randint(0, 2, (15,)) for _ in range(10)] # 10 time steps
-spikeOutputsTimeCache["layer1"] = [torch.randint(0, 2, (15,)) for _ in range(10)] # 10 time steps
-spikeOutputsTimeCache["layer2"] = [torch.randint(0, 2, (15,)) for _ in range(10)] # 10 time steps
-spikeOutputsTimeCache["layer3"] = [torch.randint(0, 2, (15,)) for _ in range(10)] # 10 time steps
+spikeOutputsTimeCache["layer1"] = [torch.randint(0, 2, (20,)) for _ in range(10)] # 10 time steps
+spikeOutputsTimeCache["layer2"] = [torch.randint(0, 2, (20,)) for _ in range(10)] # 10 time steps
+spikeOutputsTimeCache["layer3"] = [torch.randint(0, 2, (10,)) for _ in range(10)] # 10 time steps
         
 
 # Parameters for the STDP rule (Gerstner)
